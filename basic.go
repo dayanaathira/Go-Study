@@ -9,7 +9,11 @@ func main() {
 	// maths()
 	// forTest()
 	// ifElseExample()
-	switchExample()
+	// switchExample()
+	// arrayExample()
+	// slicesExample()
+	// mapExample()
+	exampleFunc()
 }
 
 // go run <filename.go> - to run and compiles immediately. single file (dev and testing env)

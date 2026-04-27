@@ -1,0 +1,48 @@
+package main
+
+import (
+	"fmt"
+	"maps"
+)
+
+func mapExample() {
+
+	m := make(map[string]int)
+
+	m["k1"] = 7
+	m["k2"] = 13
+
+	fmt.Println("map:", m)
+
+	v1 := m["k1"]
+	fmt.Println("v1:", v1)
+
+	v3 := m["k3"]
+	fmt.Println("v3:", v3)
+
+	fmt.Println("len:", len(m))
+
+	delete(m, "k2")
+	fmt.Println("map:", m)
+
+	fmt.Println("k1", m["k1"])
+
+	m["k2"] = 11
+	fmt.Println("k2", m["k2"])
+
+	clear(m)
+	fmt.Println("map:", m)
+
+	m["k2"] = 800
+
+	_, prs := m["k2"] //_ this means, i dont care the value just tell if the key exists, false if not
+	fmt.Println("prs:", prs)
+
+	n := map[string]int{"foo": 1, "bar": 2}
+	fmt.Println("map:", n)
+
+	n2 := map[string]int{"foo": 1, "bar": 2}
+	if maps.Equal(n, n2) {
+		fmt.Println("n == n2")
+	}
+}
